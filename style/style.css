@@ -1,0 +1,269 @@
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --font-size: 16px;
+  --padding: 10px;
+  --bg-color: #33145a;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: white;
+  line-height: 1.6;
+}
+
+/* Global Styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar Styles */
+
+header {
+  background-color: #690a7cc8;
+  padding: 1em 0;
+  position: relative;
+  animation: shake-horizontal 0.8s linear both;
+}
+
+nav {
+  margin-top: 13.5px;
+  padding-block: 1em;
+  z-index: 2 !important;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #690a7cc8;
+}
+
+.nav {
+  display: none;
+  gap: 20px;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 5em;
+  padding-block: 2em;
+  z-index: 1;
+}
+
+.nav.show {
+  display: block;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  padding: 10px 15px;
+  color: white;
+  transition: background-color 0.2s ease;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+/* Section Styles */
+
+section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Footer Styles */
+
+footer {
+  text-align: center;
+  padding: 1em 0;
+  background-color: #333;
+  color: white;
+}
+
+/* Container Styles */
+
+
+ 
+
+
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  margin-top: 20px;
+  background: rgb(74, 9, 97);
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+
+/* Profile Header Styles */
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-header img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+/* Bio Styles */
+
+.bio {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Posts Styles */
+
+.posts,
+.cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card,
+.post {
+  width: 48%;
+  margin-bottom: 10px;
+  background-color: #7a4d75;
+
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/* postes style     ++++++++++++++++++++ */
+
+.top-img {
+  display: block;
+  height: 200px;
+  width: 100%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+
+  background: #4c4c4c;
+  object-fit: cover;
+}
+
+
+
+.top-img.skeleton-anim {
+  animation: skeleton 0.8s ease-in-out infinite alternate;
+}
+@keyframes skeleton {
+  to {
+    opacity: 0.6;
+  }
+}
+.content {
+  padding: 15px;
+}
+.skeleton-title,
+.skeleton-text {
+  background: #4c4c4c;
+  animation: skeleton 0.8s ease-in-out infinite alternate;
+  width: 60%;
+}
+.skeleton-title {
+  height: 20px;
+}
+.skeleton-text {
+  margin-top: 10px;
+  height: 10px;
+}
+.skeleton-text:first-of-type {
+  width: 90%;
+}
+
+.card-title {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.card-text {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+/* Background Animation Styles */
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.count-particles {
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13e8e9;
+  font-size: 0.8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.js-count-particles {
+  font-size: 1.1em;
+}
+
+#stats,
+.count-particles {
+  -webkit-user-select: none;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+#stats {
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+
+.count-particles {
+  border-radius: 0 0 3px 3px;
+}
